@@ -1,0 +1,179 @@
+.header-img {
+    z-index: 1;
+}
+
+/* Home page */
+.container1 {
+    background: url(images/Home.png) center center / cover no-repeat;
+    z-index: 1;
+    height: 480px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.container1-text {
+    margin-top: 325px;
+    margin-left: 50px;
+    font-size: 1.5rem;
+}
+
+.post-1 {
+    max-width: 692px;
+    border-color: rgb(224, 224, 224);
+    fill: rgb(255, 255, 255);
+}
+
+.inner-container-2 {
+    max-width: 1040px;
+    height: 68px;
+    background: rgb(255, 255, 255);
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    z-index: 100;
+}
+
+.modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 750px;
+    height: 553px;
+    top: auto;
+    left: auto;
+    gap: 0px;
+    opacity: 0px;
+    margin: auto;
+    color: var(--bs-modal-color);
+    pointer-events: auto;
+    background-color: var(--bs-modal-bg);
+    background-clip: padding-box;
+    border: var(--bs-modal-border-width) solid var(--bs-modal-border-color);
+    border-radius: var(--bs-modal-border-radius);
+    outline: 0;
+}
+
+/* CSS for the wrapper */
+#create-form-wrapper {
+    display: none; /* Initially hide the wrapper */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 100; /* Ensure the wrapper is above other content */
+    transition: opacity 0.3s ease; /* Add transition effect for opacity */
+}
+
+/* CSS for the sign-up form */
+#create-form {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+   
+}
+
+#sign-in-form-wrapper {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 100; 
+    transition: opacity 0.3s ease; 
+}
+
+/* CSS for the sign-up form */
+#sign-in-create-form {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    
+}
+
+.signUp-heading {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    text-align: center;
+    color: #008A45;
+    height: 50px;
+    background-color: #EFFFF4;
+}
+
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+/* Media query for mobile phones */
+@media (max-width: 575.98px) {
+   
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+        width: 100%; 
+        height: auto; 
+        gap: 0px;
+        opacity: 0px;
+    }
+
+    .container1 {
+        width: 100%; 
+       
+    }
+
+    .container1-text {
+        margin-top: 100px; 
+    }
+
+    .container3 {
+        width: 100%; 
+        margin-left: 30px;
+    }
+
+    .posts-center {
+        max-width: 100%; 
+    }
+
+    .sidebar {
+        margin-top: 20px; 
+    }
+
+    .modal-content {
+        width: 100%; 
+        height: auto; 
+    }
+}
+/* For tablets */
+@media (max-width: 991.98px) {
+    .header-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    .header-form {
+      margin-top: 20px;
+    }
+    .header-button {
+      margin-top: 20px;
+    }
+    .container1-text {
+      margin-top: 200px;
+    }
+    .posts-center {
+      max-width: 100%;
+    }
+    .sidebar {
+      margin-top: 20px;
+    }
+  }
+  
+ 

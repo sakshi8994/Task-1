@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+    
+    
+    <title>Task-1</title>
+</head>
+<body class="body">
+    <!-- header-section -->
+    <div class="header-container container d-none d-lg-flex  align-items-center justify-content-between p-3">
+        <div class="header-img" >
+            <img src="https://dont-copy.netlify.app/assets/logo-S2lIhR8K.svg" width="162.57px" height="24px" alt="Logo">
+        </div>
+        <div class="header-form">
+            <form class="d-flex" style="width: 360px; border-radius: 21px;"><button class="custom-search" type="submit">
+                    <img alt="Search" style="border: none;" class="search-img"
+                        src="images/searchlogo.png"
+                        width="22" height="22"></button><input class="form-control custom-input-search" type="search"
+                    placeholder="Search for your favorite groups in ATG" aria-label="Search"></form>
+        </div>
+        <div class="header-button">
+            <button onclick="signUppopUp()" id="show" class="btn custom-btn-create p-0 m-0" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                fdprocessedid="hd62ne">create Account. <span class="text-primary fw-bold">It's Free!<img
+                        class="rounded-circle" alt="Profile"
+                        src="images/baseline-arrow_drop_down-24px.jpg"></span>
+            </button>
+        </div>
+    </div>
+<!-- sign-up -->
+<div id="create-form-wrapper" style="z-index: 101; ">
+<div id="create-form" class="create-account" style="z-index: 2; ">
+    <div class="create-account" >
+     
+        <div class="modal-content" style="background-color: white;">
+            <div class="modal-header custom-modal-header d-flex justify-content-center mb-4 signUp-heading">Let's learn, share
+                <!-- &amp; -->
+                inspire each other with our passion for computer engineering. Sign up now 🤘🏼 
+                <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+                <button id="close-form"  style="border-radius: 50%; border: 0px;" type="button"  class="close" aria-label="Close" onclick="closePopup()">
+                    <span aria-hidden="true" >&times;</span>
+                    
+                </button>
+            <!--  -->
+            </div>
+            <div class="px-4">
+                <div class="d-flex justify-content-between  align-items-center mb-4">
+                    <h4  class="d-flex fw-bold" id="update" onclick="closePopup()">Create Account</h4>
+                    
+                    <button   class="btn" fdprocessedid="n1c408">Already
+                        have an account? <span class="text-primary" id="sign-in" onclick=" closePopup();signInpopUp()">Sign In</span></button>
+                </div>
+                <div class="container text-center">
+                    <div class="row">
+                        <div class="col">
+                            <div class="d-flex flex-column gap-2">
+                                <div class="d-flex"><input type="text" class="form-control custom-input"
+                                        placeholder="First Name" fdprocessedid="nzshdh" id="hide-for-sign-in1" style="display: block;"
+                                        ><input  type="text"
+                                        class="form-control custom-input" placeholder="Last Name"
+                                        fdprocessedid="k6vm0s" id="hide-for-sign-in2" style="display: block;"></div><input type="email"
+                                    class="form-control custom-input" placeholder="Email" fdprocessedid="eesilp">
+                                <div class="d-flex align-items-center justify-content-between  position-relative">
+                                    <input type="password" class="form-control custom-input" placeholder="Password"
+                                        fdprocessedid="dshol6"><button class="btn position-absolute"
+                                        style="right: 10px;" fdprocessedid="fg2vi5"><img
+                                            src="images/eyeIcon.svg"
+                                            alt="eye" width="18px" height="18px"></button></div><input
+                                    type="password" class="form-control mb-4 custom-input"
+                                    placeholder="Confirm password" fdprocessedid="jpcdvo"><button
+                                    class="btn btn-primary rounded-5 d-flex justify-content-center align-items-center mb-4 create-btn"
+                                    data-bs-dismiss="modal" fdprocessedid="rk667f" id="update1" onclick="closePopup()">Create Account</button>
+                                <div class="d-flex flex-column gap-2"><button
+                                        class="btn d-flex align-items-center justify-content-center gap-2 button-signup-group"
+                                        fdprocessedid="z1rjm"><img src="images/facebook.png"
+                                            alt="facebook">Sign Up with Facebook</button><button
+                                        class="btn d-flex align-items-center gap-2 button-signup-group justify-content-center"
+                                        fdprocessedid="i8quid"><img
+                                            src="images/google.png"
+                                            alt="google">Sign Up with Google</button></div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="d-flex flex-column"><img src="images/sign-up.png"
+                                    alt="atg-illustration">
+                                <p class="info-signup">By signing up, you agree to our Terms &amp; conditions,
+                                    Privacy
+                                    policy</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<!-- sign-in -->
+<div id="sign-in-form-wrapper" style="z-index: 101; ">
+    <div id="sign-in-create-form" class="create-account" style="z-index: 2; ">
+        <div class="create-account" >
+            
+            <div class="modal-content" style="background-color: white;">
+                <div class="modal-header custom-modal-header d-flex justify-content-center mb-4 signUp-heading">Let's learn, share
+                    <!-- &amp; -->
+                    inspire each other with our passion for computer engineering. Sign up now 🤘🏼 
+                    <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+                    <button id="close-form"  style="border-radius: 50%; border: 0px;" type="button"  class="close" aria-label="Close" onclick="closesignInPopup()">
+                        <span aria-hidden="true" >&times;</span>
+                        
+                    </button>
+                <!--  -->
+                </div>
+                <div class="px-4">
+                    <div class="d-flex justify-content-between  align-items-center mb-4">
+                        <h4  class="d-flex fw-bold" id="update">Sign-In</h4>
+                        
+                        <button   class="btn" fdprocessedid="n1c408" onclick="closesignInPopup() ; signUppopUp()">Don’t have an account yet? 
+                             <span class="text-primary" id="sign-in" >Create new for free!</span></button>
+                    </div>
+                    <div class="container text-center">
+                        <div class="row">
+                            <div class="col">
+                                <div class="d-flex flex-column gap-2">
+                                   
+                                            
+                                        <input type="email"
+                                        class="form-control custom-input" placeholder="Email" fdprocessedid="eesilp">
+                                    <div class="d-flex align-items-center justify-content-between  position-relative">
+                                        <input type="password" class="form-control custom-input" placeholder="Password"
+                                            fdprocessedid="dshol6"><button class="btn position-absolute"
+                                            style="right: 10px;" fdprocessedid="fg2vi5"><img
+                                                src="images/eyeIcon.svg"
+                                                alt="eye" width="18px" height="18px"></button>
+                                            </div>
+                                        
+                                        
+                                       <button
+                                        class="btn btn-primary rounded-5 d-flex justify-content-center align-items-center mb-4 create-btn"
+                                        data-bs-dismiss="modal" fdprocessedid="rk667f" id="update1" onclick="closesignInPopup()">Login</button>
+                                    <div class="d-flex flex-column gap-2"><button
+                                            class="btn d-flex align-items-center justify-content-center gap-2 button-signup-group"
+                                            fdprocessedid="z1rjm"><img src="images/facebook.png"
+                                                alt="facebook">Sign Up with Facebook</button><button
+                                            class="btn d-flex align-items-center gap-2 button-signup-group justify-content-center"
+                                            fdprocessedid="i8quid"><img
+                                                src="images/google.png"
+                                                alt="google">Sign Up with Google</button></div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="d-flex flex-column"><img src="images/sign-up.png"
+                                        alt="atg-illustration">
+                                    <p class="info-signup">By signing up, you agree to our Terms &amp; conditions,
+                                        Privacy
+                                        policy</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!-- Home Page -->
+    <div class="container1" style="z-index: 1;">
+        <div class="container1-text">
+            <h1 class="text-white">Computer Engineering</h1>
+            <p class="text-white mb-5">142,765 Computer Engineers follow this</p>
+        </div>
+    </div>
+
+    <div class="container2" >
+        <div class="d-none d-lg-flex justify-content-between mx-auto align-items-center container sticky-top inner-container-2"
+            >
+            
+            <ul class="nav my-2 nav-underline" >
+                <li class="nav-item"><a class="nav-link active" href="/">All Posts (32)</a></li>
+                <li class="nav-item"><a class="nav-link" href="/">Article</a></li>
+                <li class="nav-item"><a class="nav-link" href="/">Event</a></li>
+                <li class="nav-item"><a class="nav-link" href="/">Education</a></li>
+                <li class="nav-item"><a class="nav-link" href="/">Job</a></li>
+            </ul>
+            <div class="d-flex my-2 align-items-center"><button class="btn" aria-label="write-post"
+                    style="background: rgb(242, 242, 242);">Write Post<img
+                        src="images/baseline-arrow_drop_down-24px.jpg"
+                        alt="arrow down"></button>
+                        
+                    <button class="btn btn-primary ms-2 gap-2 d-flex align-items-center "
+                    aria-label="Join group" style="border: 0.8px solid rgb(152, 152, 153);"><img
+                        src="images/joinGroup.png"
+                        alt="Join group">Join Group</button></div>
+        </div>
+    </div>
+
+    <!-- posts -->
+
+    <hr class="mx-auto mt-0" style="max-width: 1040px;">
+
+    <div class="container3">
+        <div class="mx-auto d-flex gap-5 justify-content-center" style="max-width: 1040px;">
+            <div class="posts-center position-relative">
+                <div class="d-flex flex-column border border-1 rounded-2 post-1"
+                    >
+                   
+                    <img
+                        src="images/post1.png" alt="Nature" class="imagePost">
+                    <div class="p-4">
+                        <h3 class="d-flex">✍️ Article</h3>
+                        <div class="d-flex gap-6 justify-content-between">
+                            <h4>What if famous brands had regular fonts? Meet RegulaBrands!</h4>
+                            <div class="btn align-self-start">
+                                <div class="dropdown">
+                                    <div type="button" data-bs-toggle="dropdown" aria-expanded="false"><img
+                                            src="images/dots.png"
+                                            alt="more details" height="28px" width="28px"></div>
+                                    <ul class="dropdown-menu">
+                                        <li><button class="dropdown-item" type="button">Edit</button></li>
+                                        <li><button class="dropdown-item" type="button">Report</button></li>
+                                        <li><button class="dropdown-item" type="button">option 3</button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="d-flex align-items-center gap-5 list-unstyled "></ul>
+                        <p>I’ve worked in UX for the better part of a decade. From now on, I plan to rei…</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="d-flex align-items-center gap-2"><img class="rounded-circle" alt="Profile"
+                                    src="images/sarthak.png" width="48"
+                                    height="48">
+                                <div class="d-flex flex-column">
+                                    <div class="text-wrapper">Sarthak Kamra</div>
+                                    <div class="d-lg-none"><img
+                                            src="images/eyeIcon.svg"
+                                            alt="watch"><span>1.4k views</span></div>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="d-none d-lg-block pe-4"><img
+                                        src="images/eyeIcon.svg"
+                                        alt="watch"><span>1.4k views</span></div><button
+                                    class="btn d-flex align-items-center gap-2"
+                                    style="background: rgb(237, 238, 240);"><img
+                                        src="images/share.png"
+                                        alt="share"><span class="d-lg-none">Share</span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-column border border-1 rounded-2 post-1"
+                    >
+                   
+                    <img
+                        src="images/post2.png" alt="Nature" class="imagePost">
+                    <div class="p-4">
+                        <h3 class="d-flex">🔬️ Education</h3>
+                        <div class="d-flex gap-6 justify-content-between">
+                            <h4>Tax Benefits for Investment under National Pension Scheme launched by Government</h4>
+                            <div class="btn align-self-start">
+                                <div class="dropdown">
+                                    <div type="button" data-bs-toggle="dropdown" aria-expanded="false"><img
+                                            src="images/dots.png"
+                                            alt="more details" height="28px" width="28px"></div>
+                                    <ul class="dropdown-menu">
+                                        <li><button class="dropdown-item" type="button">Edit</button></li>
+                                        <li><button class="dropdown-item" type="button">Report</button></li>
+                                        <li><button class="dropdown-item" type="button">option 3</button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="d-flex align-items-center gap-5 list-unstyled "></ul>
+                        <p>I’ve worked in UX for the better part of a decade. From now on, I plan to rei…</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="d-flex align-items-center gap-2"><img class="rounded-circle" alt="Profile"
+                                    src="images/sarah.png"
+                                    width="48" height="48">
+                                <div class="d-flex flex-column">
+                                    <div class="text-wrapper">Sarah West</div>
+                                    <div class="d-lg-none"><img
+                                            src="images/eyeIcon.svg"
+                                            alt="watch"><span>1.4k views</span></div>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="d-none d-lg-block pe-4"><img
+                                        src="images/eyeIcon.svg"
+                                        alt="watch"><span>1.4k views</span></div><button
+                                    class="btn d-flex align-items-center gap-2"
+                                    style="background: rgb(237, 238, 240);"><img
+                                        src="images/share.png"
+                                        alt="share"><span class="d-lg-none">Share</span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex flex-column border border-1 rounded-2 post-1"
+                   >
+                   
+                   <img
+                        src="images/post3.png" alt="Nature" class="imagePost">
+                    <div class="p-4">
+                        <h3 class="d-flex">🗓️ Meetup</h3>
+                        <div class="d-flex gap-6 justify-content-between">
+                            <h4>Finance &amp; Investment Elite Social Mixer @Lujiazui</h4>
+                            <div class="btn align-self-start">
+                                <div class="dropdown">
+                                    <div type="button" data-bs-toggle="dropdown" aria-expanded="false"><img
+                                            src="images/dots.png"
+                                            alt="more details" height="28px" width="28px"></div>
+                                    <ul class="dropdown-menu">
+                                        <li><button class="dropdown-item" type="button">Edit</button></li>
+                                        <li><button class="dropdown-item" type="button">Report</button></li>
+                                        <li><button class="dropdown-item" type="button">option 3</button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="d-flex align-items-center gap-5 list-unstyled ">
+                            <li class="d-flex align-items-center gap-1"><img
+                                    src="images/calender.png"
+                                    alt="date" width="20px" height="20px">Fri, 12 Oct, 2018</li>
+                            <li class="d-flex align-items-center gap-1"><img
+                                    src="images/location.png"
+                                    alt="location" width="20px" height="20px">Ahmedabad, India</li>
+                        </ul><button class="custom-post-link btn mb-4 fw-semibold"
+                            style="color: rgb(229, 97, 53); width: 100%;">Visit WebSite</button>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="d-flex align-items-center gap-2"><img class="rounded-circle" alt="Profile"
+                                    src="images/ronal.png"
+                                    width="48" height="48">
+                                <div class="d-flex flex-column">
+                                    <div class="text-wrapper">Ronal Jones</div>
+                                    <div class="d-lg-none"><img
+                                            src="images/eyeIcon.svg"
+                                            alt="watch"><span>1.4k views</span></div>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="d-none d-lg-block pe-4"><img
+                                        src="images/eyeIcon.svg"
+                                        alt="watch"><span>1.4k views</span></div><button
+                                    class="btn d-flex align-items-center gap-2"
+                                    style="background: rgb(237, 238, 240);"><img
+                                        src="images/share.png"
+                                        alt="share"><span class="d-lg-none">Share</span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex flex-column border border-1 rounded-2 post-1"
+                    >
+                    
+                    <div class="p-4">
+                        <h3 class="d-flex">💼️ Job</h3>
+                        <div class="d-flex gap-6 justify-content-between">
+                            <h4>Software Developer</h4>
+                            <div class="btn align-self-start">
+                                <div class="dropdown">
+                                    <div type="button" data-bs-toggle="dropdown" aria-expanded="false"><img
+                                            src="images/dots.png"
+                                            alt="more details" height="28px" width="28px"></div>
+                                    <ul class="dropdown-menu">
+                                        <li><button class="dropdown-item" type="button">Edit</button></li>
+                                        <li><button class="dropdown-item" type="button">Report</button></li>
+                                        <li><button class="dropdown-item" type="button">option 3</button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="d-flex align-items-center gap-5 list-unstyled ">
+                            <li class="d-flex align-items-center gap-1"><img
+                                    src="images/bag.png"
+                                    alt="date" width="20px" height="20px">Innovaccer Analytics Private Ltd.</li>
+                            <li class="d-flex align-items-center gap-1"><img
+                                    src="images/location.png"
+                                    alt="location" width="20px" height="20px">Noida, India</li>
+                        </ul><button class="custom-post-link btn mb-4 fw-semibold"
+                            style="color: rgb(2, 184, 117); width: 100%;">Apply on Timejobs</button>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="d-flex align-items-center gap-2"><img class="rounded-circle" alt="Profile"
+                                    src="images/joshep.png" width="48"
+                                    height="48">
+                                <div class="d-flex flex-column">
+                                    <div class="text-wrapper">Joseph Gray</div>
+                                    <div class="d-lg-none"><img
+                                            src="images/eyeIcon.svg"
+                                            alt="watch"><span>1.4k views</span></div>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="d-none d-lg-block pe-4"><img
+                                        src="images/eyeIcon.svg"
+                                        alt="watch"><span>1.4k views</span></div><button
+                                    class="btn d-flex align-items-center gap-2"
+                                    style="background: rgb(237, 238, 240);"><img
+                                        src="images/share.png"
+                                        alt="share"><span class="d-lg-none">Share</span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- side Bar -->
+            <div class="sidebar">
+                <div class="container d-none d-lg-flex flex-column mt-4 ">
+                    <div class="d-flex justify-content-between">
+                        <div class="d-flex align-items-center"><img
+                                src="images/location.png"
+                                alt="location"><input type="text" placeholder="Enter Your Location" class="input-text">
+                        </div><button class="btn"><img
+                                src="images/cross.png"
+                                alt="edit"></button>
+                    </div>
+                    <hr class="my-1">
+                    <div class="d-flex align-items-center gap-2 mb-4"><img
+                            src="images/error.png"
+                            alt="information" class="align-self-start">
+                        <p class="location-info">Your location will help us serve better and extend a personalised
+                            experience.</p>
+                    </div>
+                    <div class="d-flex align-items-center gap-2 text-capitalize mb-3"><img
+                            src="images/done.png"
+                            alt="thumbs up"><span class="text-recommended">REcommended Groups</span></div>
+                    <div class="d-flex flex-column gap-4">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center gap-2"><img class="rounded-circle" alt="Profile"
+                                    src="images/group1.png" width="36"
+                                    height="36">
+                                <div class="text-wrapper">Leisure</div>
+                            </div><a class="btn follow rounded-5" href="/">Follow</a>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center gap-2"><img class="rounded-circle" alt="Profile"
+                                    src="images/group2.png" width="36"
+                                    height="36">
+                                <div class="text-wrapper">Activism</div>
+                            </div><a class="btn follow rounded-5" href="/">Follow</a>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center gap-2"><img class="rounded-circle" alt="Profile"
+                                    src="images/group3 (2).png" width="36"
+                                    height="36">
+                                <div class="text-wrapper">MBA</div>
+                            </div><a class="btn follow rounded-5" href="/">Follow</a>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center gap-2"><img class="rounded-circle" alt="Profile"
+                                    src="images/group4.png" width="36"
+                                    height="36">
+                                <div class="text-wrapper">Philosophy</div>
+                            </div><a class="btn follow rounded-5" href="/">Follow</a>
+                        </div>
+                    </div><button class="btn text-end mt-5 text-primary text-capitalize">see more...</button>
+                </div>
+            </div>
+        </div>
+    
+    <br><br><br><br><br><br><br>
+    
+   
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+    <script>
+       
+    
+
+    </script>
+<script src="index.js"></script> 
+</body>
+</html>
